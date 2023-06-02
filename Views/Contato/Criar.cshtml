@@ -1,0 +1,28 @@
+﻿@using MvcAplication.Models;
+@model ContatoModel
+@{
+    ViewData["Title"] = "Adicionar Contato";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Cadastrar Contato</h1>
+</div>
+<form asp-controller="Contato" asp-action="Criar" method="post">
+
+    <div class="mb-3">
+        <label for="nome" class="form-label"><strong>Nome</strong></label>
+        <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o nome do contato">
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label"><strong>E-mail</strong></label>
+        <input type="text" asp-for="Email" class="form-control" placeholder="Digite o e-mail do contato">
+    </div>
+    <div class="mb-3">
+        <label for="celular" class="form-label"><strong>Celular</strong></label>
+        <input type="text" asp-for="Celular" class="form-control" placeholder="Digite o celular do contato">
+    </div>
+    <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-warning">Cadastrar</button>
+        <a class="btn btn-secondary" asp-controller="Contato" asp-action="Index">Voltar</a>
+    </div>
+</form>
